@@ -1,0 +1,27 @@
+---
+title: "Data_Manipulation"
+author: "Grace Liu"
+date: "9/20/2018"
+output: html_document
+---
+
+library(tidyverse)
+
+options(tibble.print_min = 3)
+
+## Import dataset
+
+Import dataset for use later on.
+
+```{r}
+litters_data = read_csv("/Users/graceliu/Documents/2018 Fall/P8105 Data Science/Data_Wrangling_I/data/FAS_litters.csv",
+  col_types = "ccddiiii")
+litters_data = janitor::clean_names(litters_data)
+
+pups_data = read_csv("/Users/graceliu/Documents/2018 Fall/P8105 Data Science/Data_Wrangling_I/data/FAS_pups.csv",
+  col_types = "ciiiii")
+pups_data = janitor::clean_names(pups_data)
+```
+
+
+```{r}
